@@ -1,0 +1,27 @@
+10/10/2021
+
+VPC (Virtual Private Cloud)
+
+1. Amazon Virtual Private Cloud (VPC) gives you complete control over your 
+virtual networking environment, including resource placement, connectivity, 
+and security. 
+2. With VPC we achive network isolation
+3. VPC is a private cloud inside Puplic Cloud 
+4. Inside VPC we create Subnets(Sub Networks). 2 types of Subnets --> Public and Private 
+5. Difference between Public and Private subnets is Public Subnets have internet connectivity but Private 
+Subnets don't have. 
+6. Can Subnets in the same VPC have overlapping IP CIDRs? Answer is No. 
+7. By default Subnets are private. 
+8. Public Route Table --> In order to make it public we need to add Internet Gateway and associate with 
+public Subnets
+9. Private Route Table --> Traffic remains local to VPC, it means traffic doesn't go outside of VPC 
+
+Security in VPC 
+
+1. NACL --> Network Access Control List is stateless. It means once define inbound rules we must explicitly
+define outbound rules as well.
+1.2 NACLs work in Subnet level
+1.3 NACLs go with rule numbers (for example: 100, 101, 200 and etc.)
+2. SG --> Security Group. SG is statefull, means once we define inbound(ingress, incoming) rules we don't 
+have to define outbound(egress, outgoung) rules. It's automatically allowed. 
+2.1 SGs work in EC2 level 
