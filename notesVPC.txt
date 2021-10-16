@@ -2,6 +2,8 @@
 
 VPC (Virtual Private Cloud)
 
+VPC is a private network inside public network in order to achieve network isolation.
+
 1. Amazon Virtual Private Cloud (VPC) gives you complete control over your 
 virtual networking environment, including resource placement, connectivity, 
 and security. 
