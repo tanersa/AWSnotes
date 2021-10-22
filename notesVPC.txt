@@ -27,3 +27,43 @@ define outbound rules as well.
 2. SG --> Security Group. SG is statefull, means once we define inbound(ingress, incoming) rules we don't 
 have to define outbound(egress, outgoung) rules. It's automatically allowed. 
 2.1 SGs work in EC2 level 
+
+
+Date: 0/16/2021 -- VPC cont. 
+
+1. Diagram tools --> draw.io or lucidchart 
+
+HomeWork for 10/23/2021
+
+1. Use draw.io or lucidchart to build VPC with 4 subnests (2 Public and 2 Private) and rest of VPC 
+components. 
+2. Build README.md file and add all the steps for VPC. 
+
+
+Date: 10/17/2021
+
+1. We already have a existing VPC (Our house) with 4 subnets. 
+2. Existing VPC (Our house) is not enough for our demands. We need scale up the VPC. 
+3. We need to build Highly Available (HA) infrastructure. 
+4. Highly Available (HA) meaning at least 99.999 % availability  
+5. For HA we build multi tier infrastructure
+6. Multi tier means --> we deploy our infrastructure/application to multiple AZ (Subnet)
+7. HA or Disaster Recovery is same. 
+8. Bastion Host (Jump box) --> Provides private connectivity from Public Subnets to Private Subnets. A bastion host 
+is a server whose purpose is to provide access to a private network from an external network, such as 
+the Internet. Because of its exposure to potential attack, a bastion host must minimize the chances of 
+penetration.
+9. NAT (Network Address Translation) Gateway --> NAT gateway enables instances in private subnets to connect to the 
+internet but prevents them from receiving unsolicited inbound connections from the internet. You should 
+associate an elastic IP address with a public NAT gateway and attach an internet gateway to the VPC 
+containing it.
+10. Elastic IP --> Static IP. 
+
+SSH from BastionHost to Private instances
+1. ssh-add -K pem file.
+2. ssh -A ec2-user@BastionHost-PublicIP 
+3. ssh ec2-user@PrivateInstance-PrivateIP
+
+
+
+Why we enabled Auto Modify auto-assign IP settings for Public Subnets??
