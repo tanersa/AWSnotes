@@ -1,6 +1,6 @@
-**MATURE VPC INFRASTRUCTURE**
+**CREATING VPC INFRASTRUCTURE FROM SCRATCH**
 
-**Steps tp create VPC:**
+**Steps to create VPC:**
 1- Create your own VPC:
     Name your VPC
     Place your CIDR Block No (ex. 10.0.0.0/16) ---> 16 would correspond how many IP adresses we will get for that VPC
