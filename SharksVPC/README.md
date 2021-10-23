@@ -41,7 +41,7 @@
    - All 3 public subnets need to be enabled for "Auto-assign IPv4 adress". We will see this option when we create our EC2s.
    - Eventhough, we enabled auto-assign public IP adresses on public subnets, these public subnets are still private because there is no Route Table (RT) that is         assigned to IGW. 
 
-**_6- Create Route Table for public subnets:_**
+**_6- Create Route Table (RT) for public subnets:_**
 
    - We need to create one Route Table for 3 public subnets. 
    - Go to Route Tables, and click on create RT then name your RT for public subnets.
@@ -127,7 +127,7 @@ Follow above steps for remaing two RTs.
 
 Then edit route for reaching out to internet using NATgateways not internet gateway. Add a route and choose destination as 0.0.0.0/0 and target as NATgateway for all 3 RTs.
 
-**_13- Do subnet association for each RT and associate private subnets to private RTs accordingly based on their AZ.T_**
+**_13- Do subnet association for each RT and associate private subnets to private RTs accordingly based on their AZ._**
 
 - There should be two private subnets for each AZ. 
 
