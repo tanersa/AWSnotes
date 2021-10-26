@@ -29,7 +29,7 @@ have to define outbound(egress, outgoung) rules. It's automatically allowed.
 2.1 SGs work in EC2 level 
 
 
-Date: 0/16/2021 -- VPC cont. 
+Date: 10/16/2021 -- VPC cont. 
 
 1. Diagram tools --> draw.io or lucidchart 
 
@@ -63,6 +63,30 @@ SSH from BastionHost to Private instances
 1. ssh-add -K pem file.
 2. ssh -A ec2-user@BastionHost-PublicIP 
 3. ssh ec2-user@PrivateInstance-PrivateIP
+
+
+Date: 10/23/2021 -- VPC cont. Automation 
+
+1. In DevSecOps/Cloud --> We have to build Immutable infrastructure 
+2. IAC --> Infrastructure As Code 
+3. Which TOOLS used for IAC or Immutable Infrastructure --> CloudFormation. 
+4. CloudFormation is an AWS native IAC. 
+5. In order to provision Infrastructure we will use CloudFormation
+6. CloudFormation templates or CFT supports JSON and YAML. 
+7. YAML stands for Yet Another Markup Language. 
+8. We usually create PEM file once in single AWS Region and use for all EC2 instance in the same AWS region 
+9. CFT anatomy --> https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html
+10. We usually create Key Pair or PEM file manually 
+11. aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
+12. Deployment --> Fresh Deployment and Upgrade. 
+
+HomeWork --> 10/30/2021
+
+Take existing VPC CFT. Add 2 Subnets (1 public and 1 private). 
+Complete Subnet associations Route Table
+
+
+ 
 
 
 
