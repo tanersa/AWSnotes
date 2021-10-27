@@ -1,0 +1,28 @@
+name: cft-deploy
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    
+
+jobs:
+  cft-actions:
+    name: cft-deploy
+    runs-on: self-hosted
+
+    steps:
+
+    - name: checkout repository
+      uses: actions/checkout@master
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET_KEY_ID }}
+        aws-region: us-east-1
+
+    - name: Deploy CFT to AWS 
+      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
