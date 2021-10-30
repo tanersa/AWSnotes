@@ -25,4 +25,5 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy CFT to AWS 
+      if: github..ref == 'refs/heads/master' && github.event_name='push'
       run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
