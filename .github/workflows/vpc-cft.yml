@@ -38,4 +38,4 @@ jobs:
       run: sudo ./aws/install --update
 
     - name: Deploy CFT to AWS 
-      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
+      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=demo
