@@ -27,14 +27,14 @@ jobs:
     - name: Install AWS CLI on Ubuntu
       run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-    - name: Install uznip package
+    - name: Install unzip package
       run: sudo apt-get install unzip -y 
 
     - name: Unzip AWS CLI packages
       run: unzip awscliv2.zip
 
-    
+    - name: Start the command
+      run: sudo ./aws/install
 
     - name: Deploy CFT to AWS 
-      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stacks --parameter-overrides KeyName=bastion
-      
+      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
