@@ -32,6 +32,7 @@ jobs:
 
     - name: Unzip AWS CLI packages
       run: unzip awscliv2.zip
+      
 
     - name: Deploy CFT to AWS 
       run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
