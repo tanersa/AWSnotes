@@ -1,0 +1,41 @@
+name: cft-deploy
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    
+
+jobs:
+  cft-actions:
+    name: cft-deploy
+    runs-on: self-hosted
+
+    steps:
+
+    - name: checkout repository
+      uses: actions/checkout@master
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET_KEY_ID }}
+        aws-region: us-east-1
+
+    - name: Install AWS CLI on Ubuntu
+      run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+    - name: Install uznip package
+      run: sudo apt-get install unzip -y 
+
+    - name: Unzip AWS CLI packages
+      run: unzip awscliv2.zip
+
+    - name: Start the command
+      run: sudo ./aws/install
+
+
+    - name: Deploy CFT to AWS 
+      run: aws cloudformation deploy --template-file vpcdeploy.json --stack-name vpc-stack --parameter-overrides KeyName=bastion
