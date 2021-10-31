@@ -33,6 +33,7 @@ jobs:
     - name: Unzip AWS CLI packages
       run: unzip awscliv2.zip
 
+
     - name: Start the command
       run: sudo ./aws/install
 
