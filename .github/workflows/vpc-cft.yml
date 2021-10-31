@@ -30,6 +30,7 @@ jobs:
     - name: Install unzip package
       run: sudo apt-get install unzip -y 
 
+
     - name: Unzip AWS CLI packages
       run: unzip awscliv2.zip
 
