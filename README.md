@@ -90,7 +90,6 @@
     -PUBLIC SUBNETS  --->  We need PUBLIC VMs
     -PRIVATE SUBNETS  --->  We need PRIVATE VMs
     -We also can choose manually. Enable or Disable it. We would like to automate the process, so we dont create DB VM in public subnet accidentally.
-    
 
 **_10- Enter your Bastion host instance using terminal with below command:_**
 
