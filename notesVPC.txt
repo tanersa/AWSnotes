@@ -28,7 +28,6 @@ define outbound rules as well.
 have to define outbound(egress, outgoung) rules. It's automatically allowed. 
 2.1 SGs work in EC2 level 
 
-
 Date: 10/16/2021 -- VPC cont. 
 
 1. Diagram tools --> draw.io or lucidchart 
