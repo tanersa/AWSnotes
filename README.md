@@ -49,7 +49,7 @@
    - Add tags if necessary (ex Environment --> Development)
    - Click on create Route Table
 
-**_7- Configure public RT for public subnets:_** 
+**_7- Configure public RT for public subnets (Add a route to RT):_** 
 
    - By adding destination route as 0.0.0.0/0 and target should be your Internet Gateway and save changes.
 
