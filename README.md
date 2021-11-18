@@ -160,6 +160,7 @@ Lastly, EC2 instances page will provide your instance with private IP adress bec
 In total you would have one public Bastion Host instance and one private AppServer instance.
 
 
+
 **_Important Notes:_** 
 
 _Why do we need 3 AZs?_
