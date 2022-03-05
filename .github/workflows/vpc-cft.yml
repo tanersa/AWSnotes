@@ -6,7 +6,6 @@ on:
       - master
   pull_request:
     
-
 jobs:
   cft-actions:
     name: cft-deploy
