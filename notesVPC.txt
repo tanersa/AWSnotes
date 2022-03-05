@@ -85,8 +85,4 @@ Take existing VPC CFT. Add 2 Subnets (1 public and 1 private).
 Complete Subnet associations Route Table
 
 
- 
-
-
-
 Why we enabled Auto Modify auto-assign IP settings for Public Subnets??
