@@ -181,8 +181,6 @@ _Why do we use SSH?_
 Elastic IP = Static IP
 
 
-
-
 ---
 **NOTE**
 
